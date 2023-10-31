@@ -1,0 +1,98 @@
+﻿@model LandsApplication.Models.PurchaseOption
+
+@{
+    ViewData["Title"] = "PurchaseForm";
+}
+
+<h1>PurchaseForm</h1>
+
+<h4>PurchaseOption</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PurchaseForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RegistrationNo" class="control-label"></label>
+                <input asp-for="RegistrationNo" class="form-control" />
+                <span asp-validation-for="RegistrationNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Township" class="control-label"></label>
+                <input asp-for="Township" class="form-control" />
+                <span asp-validation-for="Township" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lessor" class="control-label"></label>
+                <input asp-for="Lessor" class="form-control" />
+                <span asp-validation-for="Lessor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lessee" class="control-label"></label>
+                <input asp-for="Lessee" class="form-control" />
+                <span asp-validation-for="Lessee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PropertyDetails" class="control-label"></label>
+                <input asp-for="PropertyDetails" class="form-control" />
+                <span asp-validation-for="PropertyDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="District" class="control-label"></label>
+                <input asp-for="District" class="form-control" />
+                <span asp-validation-for="District" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnnexedPeriod" class="control-label"></label>
+                <input asp-for="AnnexedPeriod" class="form-control" />
+                <span asp-validation-for="AnnexedPeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RentAmount" class="control-label"></label>
+                <input asp-for="RentAmount" class="form-control" />
+                <span asp-validation-for="RentAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateofRent" class="control-label"></label>
+                <input asp-for="DateofRent" class="form-control" />
+                <span asp-validation-for="DateofRent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubsequentDate" class="control-label"></label>
+                <input asp-for="SubsequentDate" class="form-control" />
+                <span asp-validation-for="SubsequentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildingClause" class="control-label"></label>
+                <input asp-for="BuildingClause" class="form-control" />
+                <span asp-validation-for="BuildingClause" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurchasePrice" class="control-label"></label>
+                <input asp-for="PurchasePrice" class="form-control" />
+                <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPurchasePrice" class="control-label"></label>
+                <input asp-for="TotalPurchasePrice" class="form-control" />
+                <span asp-validation-for="TotalPurchasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
